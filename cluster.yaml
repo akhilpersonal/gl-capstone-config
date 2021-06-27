@@ -1,0 +1,32 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: capston-eks-akhil
+  region: us-east-2
+  version: "1.19"
+
+
+vpc:
+  id: "vpc-5c71eb37"
+  subnets:
+    public:
+      us-east-2b:
+          id: "subnet-6a42ba17"
+      us-east-2c:
+          id: "subnet-b40b28f8"
+      us-east-2a:
+          id: "subnet-ec078587"
+
+nodeGroups:
+  - name: captsone-node-group
+    instanceType: t2.micro
+    ami: ami-00399ec92321828f5
+    minSize: 2
+    maxSize: 6
+    desiredCapacity: 2
+    volumeSize: 20
+
+
+
+  

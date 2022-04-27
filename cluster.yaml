@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: capston-eks-akhil
-  region: us-east-2
+  region: us-east-1
   version: "1.19"
 
 
